@@ -1,0 +1,68 @@
+.ColumnListBlock{
+    width: 100%;
+    align-self: center;
+    max-width: 800px;
+    display: flex;
+    position: relative;
+}
+.Selected{
+    position: absolute;
+    inset: 0;
+    background: #8590ae2d;
+    border-radius: 4px;
+    user-select: none;
+    pointer-events: none;
+}
+.ParagraphBlock{
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    word-break: break-all;
+    padding: 3px 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    transition: background 0.3s ease;
+    &[data-level='1']{
+        margin-left: 20px;
+    }
+    &[data-level='2']{
+        margin-left: 35px;
+    }
+    &[data-level='3']{
+        margin-left: 50px;
+    }
+    &[data-level='4']{
+        margin-left: 65px;
+    }
+    &[data-level='5']{
+        margin-left: 80px;
+    }
+    &[data-level='6']{
+        margin-left: 95px;
+    }
+}
+.HeadingBlock{
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 4px;
+    &:first-child{
+        margin-top: 0;
+    }
+}
+.ColumnBlock{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: width 1s ease-out;
+}
+.ColumnDivider{
+    position: relative;
+    width: 40px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    &:first-child{
+        display: none;
+    }
+}

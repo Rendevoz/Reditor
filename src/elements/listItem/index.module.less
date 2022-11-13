@@ -1,0 +1,33 @@
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.marker{
+    padding-right: 12px;
+    font-size: 20px;
+    height: 22px;
+    line-height: 21px;
+    &[data-level='1'],&[data-level='3'],&[data-level='5']{
+            &::before{
+                content: '\25E6';
+            }
+    }
+    &[data-level='2'],&[data-level='4'],&[data-level='6']{
+        &::before{
+            content: '\25AA';
+        }
+    }
+    &::before{
+        content: '\2022';
+    }
+}
+.fold{
+    position: absolute;
+    top: 0;
+    user-select: none;
+    left: -15px;
+    top: 5px;
+    cursor: pointer;
+}
